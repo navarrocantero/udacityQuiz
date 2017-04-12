@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/carbon"
+    tools:context="s3.udacityquiz.MainActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <LinearLayout
+                android:id="@+id/welcomeQuiz"
+                android:layout_width="321dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="321dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="7.24"
+                    android:background="@android:color/holo_red_dark"
+                    android:text="Jdm Quiz"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/QuestionOne_layout"
+                android:layout_width="321dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:orientation="vertical"
+                android:paddingLeft="35dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <TextView
+                    android:id="@+id/QuestionTwoText_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1.87"
+                    android:background="@android:color/white"
+                    android:text="What engine was made before ?"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RadioButton
+                        android:id="@+id/NissanRb_buttonid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:onClick="onRadioButtonClickedTwoChoices"
+                        android:text="Nissan RB Engine" />
+
+                    <RadioButton
+                        android:id="@+id/toyotaJz_buttonid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:checked="false"
+                        android:onClick="onRadioButtonClickedTwoChoices"
+                        android:text="Toyota JZ Engine" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/QuestionTwo_layout"
+                android:layout_width="321dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="35dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <TextView
+                    android:id="@+id/QuestionOneText_Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1.87"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:text="Max rpm of s2000 engine (F20C) ?"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.87"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RadioButton
+                            android:id="@+id/RPM8000_buttonid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:onClick="onRadioButtonClickedFourChoices"
+                            android:text="8000" />
+
+                        <RadioButton
+                            android:id="@+id/RPM8500_buttonid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:onClick="onRadioButtonClickedFourChoices"
+                            android:text="8500" />
+
+                        <RadioButton
+                            android:id="@+id/RPM9000_buttonid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:onClick="onRadioButtonClickedFourChoices"
+                            android:text="9000" />
+
+                        <RadioButton
+                            android:id="@+id/RPM9500_buttonid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/white"
+                            android:onClick="onRadioButtonClickedFourChoices"
+                            android:text="9500" />
+                    </RadioGroup>
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/fc" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/QuestionThree_layout"
+                android:layout_width="321dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.87"
+                android:orientation="vertical"
+                android:paddingLeft="35dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <TextView
+                    android:id="@+id/QuestionFourText_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1.87"
+                    android:background="@android:color/white"
+                    android:text="What was the name of the rotary engine manufacturer ?"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/textAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.87"
+                    android:background="@android:color/white"
+                    android:ems="10"
+                    android:hint="Otto or..."
+                    android:inputType="text"
+                    android:singleLine="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/QuestionFive_layout"
+                android:layout_width="321dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="35dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <TextView
+                    android:id="@+id/QuestionThreeText_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1.87"
+                    android:background="@android:color/white"
+                    android:text="Which manufacturers have an L6 type engine ?"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/toyotaCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.87"
+                    android:background="@android:color/white"
+                    android:onClick="onCheckboxClickedSix"
+                    android:text="Toyota" />
+
+                <CheckBox
+                    android:id="@+id/NissanCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.87"
+                    android:background="@android:color/white"
+                    android:onClick="onCheckboxClickedSix"
+                    android:text="Nissan" />
+
+                <CheckBox
+                    android:id="@+id/MazdaCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.87"
+                    android:background="@android:color/white"
+                    android:onClick="onCheckboxClickedSix"
+                    android:text="Mazda" />
+
+                <CheckBox
+                    android:id="@+id/Honda_CheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.87"
+                    android:background="@android:color/white"
+                    android:onClick="onCheckboxClickedSix"
+                    android:text="Honda" />
+
+                <CheckBox
+                    android:id="@+id/MitsubishiCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.87"
+                    android:background="@android:color/white"
+                    android:onClick="onCheckboxClickedSix"
+                    android:text="Mitsubishi" />
+
+                <CheckBox
+                    android:id="@+id/SubaruCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.87"
+                    android:background="@android:color/white"
+                    android:onClick="onCheckboxClickedSix"
+                    android:text="Subaru" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Finish_layout"
+                android:layout_width="321dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="35dp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <Button
+                    android:id="@+id/buttonFinish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="finishQuiz"
+                    android:text="Finish Quiz" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
